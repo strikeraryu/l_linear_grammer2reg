@@ -115,5 +115,6 @@ class llg2reg():
         return self.reg
 
 
-#  B->Aa/Ba/Bb, A->e
+# eg 
 # S -> B00/S11, B -> B0/B1/0/1
+# B->Aa/Ba/Bb, A->

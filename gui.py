@@ -2,7 +2,7 @@ from tkinter import *
 from llg2reg import llg2reg
 
 root = Tk()
-width, height = 500, 400
+width, height = 500, 500
 in_width = 40
 root.title('Conversion')
 root.geometry(f"{width}x{height}")
@@ -25,6 +25,9 @@ def clear_text():
 in_labl = Label(root, text = "Enter regular grammar")
 in_labl.config(font = ("Courier", 11))
 
+eg_labl = Label(root, text = "Input Samples \n 1. S -> B00/S11, B -> B0/B1/0/1 \n 2. B->Aa/Ba/Bb, A->e")
+eg_labl.config(font = ("Courier", 11))
+
 b1 = Button(root, text = "Convert", command = lambda :display())
 b1.config(font = ("Courier", 11))
 
@@ -44,6 +47,7 @@ outtext = Text(root, height=2, width=in_width, bg="light yellow")
 outtext.config(font = ("Courier", 11))
 
 in_labl.pack(pady=15)
+eg_labl.pack(pady=15)
 inputtxt.pack()
 out_labl.pack(pady=15)
 outtext.pack()
@@ -52,3 +56,8 @@ b1.pack(pady=10, side=BOTTOM)
 b3.pack(pady=10, side=BOTTOM)
 
 mainloop()
+
+
+  # eg 
+  # S -> B00/S11, B -> B0/B1/0/1
+  # B->Aa/Ba/Bb, A->e
